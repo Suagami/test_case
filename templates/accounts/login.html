@@ -1,0 +1,27 @@
+{% extends 'base_page.html' %}
+{% load bootstrap4 %}
+
+{% block bootstrap4_title %}Авторизация{% endblock %}
+{% block content %}
+    <div class="container d-flex justify-content-center">
+        <div>
+            <div class="card border-dark mb-3" style="max-width: 28rem;">
+                <div class="card-header">Вход в аккаунт</div>
+                <div class="card-body text-dark">
+                    <h6 class="card-title">Пожалуйста, введите свой логин и пароль в форму:</h6>
+                    <form action="." method="post" class="form">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Войти</button>
+                    </form>
+                    <a href="/account/signup">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mt-1">
+                            Зарегистрироваться
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

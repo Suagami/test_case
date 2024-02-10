@@ -1,0 +1,24 @@
+{% extends 'bootstrap4/bootstrap4.html' %}
+{% load bootstrap4 %}
+
+{% block bootstrap4_before_content %}
+    {% include 'navbar.html' %}
+{% endblock %}
+
+
+{% block bootstrap4_content %}
+   <div class="container" style="padding-top: 25px;padding-bottom: 25px;">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+{% endblock %}
+
+
+{% block bootstrap4_extra_script %}
+    <link rel="stylesheet" href="/static/css/mdb.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/iconmoon.css">
+    <link rel="stylesheet" href="/static/css/custom_styles.css">
+    <script src="/static/js/mdb.min.js"></script>
+{% endblock %}
